@@ -1,0 +1,15 @@
+<h2>Artist's songs</h2>
+
+{{outlet}}
+
+<!--Say that this artist has X songs-->
+This artist has {{model.length}} songs.
+
+<ul>
+	{{#each model as |song|}}
+		<li>
+		<!-- Component: Must have a dash in it. then do ember g component song-item. The .hbs file will be under templates, components. then go to app, components to the js file and create tagName -->
+			{{song-item song=song}}
+		</li>
+	{{/each}}
+</ul>

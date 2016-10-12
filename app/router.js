@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('artists', function() {
+  //colon means a dynamic segment: a variable in our URL
+    this.route('artist', {path: ':id' });
+  });
 });
 
 export default Router;

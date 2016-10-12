@@ -1,0 +1,16 @@
+<p>Title: {{song.title}}</p>
+
+<p>Price: {{song.price}}</p>
+
+<p>Play count: {{song.playCount}}</p>
+
+{{#if isPopular}}
+	<img style="width: 50px" src="https://www.colourbox.com/preview/7232032-most-popular-golden-label-vector-illustration.jpg" alt="image">
+{{/if}}
+
+<!--Show one or two $ dollar sign/s based on price less than or greater than $1-->
+{{#if priceIsHigh}}
+	$$
+{{else}}
+	$
+{{/if}}
